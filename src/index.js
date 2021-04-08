@@ -6,8 +6,10 @@ import { ApolloClient } from "@apollo/client/core";
 import { InMemoryCache } from "@apollo/client/cache";
 import { ApolloProvider } from "@apollo/client/react";
 
+const graphql = process.env.graphql || "http://localhost:5000/graphql";
+
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql",
+  uri: graphql,
   cache: new InMemoryCache(),
 });
 
