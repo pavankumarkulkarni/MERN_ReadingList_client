@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Booklist from "./Components/Booklist";
+import AddBook from "./Components/AddBook";
+import AddAuthor from "./Components/AddAuthor";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <h1>Book Reading List</h1>
+      <Booklist />
+      <AddBook />
+      <AddAuthor />
     </div>
   );
 }
