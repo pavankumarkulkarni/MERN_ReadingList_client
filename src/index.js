@@ -6,14 +6,10 @@ import { ApolloClient } from "@apollo/client/core";
 import { InMemoryCache } from "@apollo/client/cache";
 import { ApolloProvider } from "@apollo/client/react";
 
-const graphql_uri = process.env.graphql || "http://localhost:5000/graphql";
-
 const client = new ApolloClient({
-  uri: graphql_uri,
+  uri: process.env.REACT_APP_GRAPHQL,
   cache: new InMemoryCache(),
 });
-
-console.log(graphql_uri);
 
 ReactDOM.render(
   <React.StrictMode>
